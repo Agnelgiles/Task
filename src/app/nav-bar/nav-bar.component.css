@@ -1,0 +1,13 @@
+.my-button{
+    position: relative;
+    height: -webkit-fill-available;
+    width: 430px;
+    background-color: brown;
+}
+.nav-bar{
+    position: relative;
+    top: 0;
+    height: 100px;
+    width: -webkit-fill-available;
+    background: black;
+}
