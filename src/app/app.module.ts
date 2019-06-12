@@ -1,23 +1,30 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
+import { CommonModule } from '@angular/common';
+import { MdButtonModule, MdCheckboxModule, MdCardModule, MdMenuModule, MdToolbarModule, MdIconModule, MdInputModule} from '@angular/material';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NavBarComponent } from './nav-bar/nav-bar.component';
-import { MainDisplayComponent } from './main-display/main-display.component';
-import { TaskService } from './service/task.service';
+import { TaskService } from './task.service';
+import { TaskListComponent } from './task-list/task-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavBarComponent,
-    MainDisplayComponent
+      TaskListComponent
   ],
   imports: [
+    CommonModule,
     BrowserModule,
-    AppRoutingModule
+    ReactiveFormsModule,
+    HttpModule,
+    MdButtonModule, MdCheckboxModule, MdCardModule, 
+    MdMenuModule, MdToolbarModule, MdIconModule, MdInputModule
   ],
-  providers: [TaskService],
+  providers: [
+    TaskService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
